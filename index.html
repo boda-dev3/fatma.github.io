@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-toggle="modal">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- اقصي مساحه للبيدج مساحه الجهاز المستخدم -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- عدم السماح بالزوم في البيدج -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- ربط الـ css -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/forme.css">
+
+<!-- الـ logo  -->
+<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+<title>Fatma Mahmoud</title>
+<script type="text/javascript" src="" async></script>
+  <script type="text/javascript">
+  const setup = (function () {
+    // console.log('setup');
+    document.getElementById('sendMessage').onsubmit = function (e) {
+      e.preventDefault();
+      console.log('click');
+      const country = '20';
+      const number = (document.getElementById('number').value || '1020234048')
+        .replace(/\D/g, '')
+        .replace(new RegExp(`^${country}`), '');
+      const text = document.getElementById('text').value;
+      if (!number) {
+        alert('Invalid number');
+        return;
+      }
+      // const link = `https://wa.me/${country}${number}?text=${text}`;
+      link = `https://web.whatsapp.com/send?phone=${country}${number}&text=${text}`;
+      if ((new MobileDetect(window.navigator.userAgent)).mobile()) {
+        link = `https://api.whatsapp.com/send?phone=${country}${number}&text=${text}`;
+      }
+      console.log(number, link);
+      window.open(link);
+    };
+  })
+  if (window.attachEvent) {
+    window.attachEvent('onload', setup);
+  } else {
+    window.addEventListener('load', setup, false);
+  }
+  </script>
+</head>
+<body>
+<!-- بداية رأس الصفحة --> 
+<header>
+<div class="container">
+<img src="img/logo.png" alt="logo" class="logo">
+<div class="toggle-btn">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav>
+<ul class="navbar">
+<li><a href="#home" class="active" data-link="home">Main</a></li>
+<li><a href="#about" data-link="about">About</a></li>
+<li><a href="#resumec" data-link="resume">Biography</a></li>
+<li><a href="#services" data-link="services">Social Media</a></li>
+<li><a href="#contactme" data-link="contactme">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- بداية الرئيسيه -->
+<main>
+<section id="home" class="home">
+<div class="container">
+<div class="content">
+<div class="left">
+<h3>Fatma <span>Mahmoud</span></h3>
+<p>Biology Teacher From Aga/Daqahlia .</p>
+<a href="#about" class="btn"><span>About Me</span></a>
+</div>
+<div class="right">
+<img src="img/mrs.jpg" alt="avatar">
+</div>
+</div>
+</div>
+</section>
+<!-- بداية حول -->
+<section id="about" class="about">
+<div class="container">
+<div class="title">
+<p>About <span>Me</span></p>
+<h3>a biology teacher , who love my job "♡ </h3>
+</div>
+<div class="content">
+<div class="left">
+<div class="big-img">
+<img src="img/mrs.jpg" alt="avatar">
+<div class="small-img">
+<div class="in">
+<div class="second-img"></div>
+</div>
+</div>
+<span class="badge"><i class="fas fa-award"></i></span>
+<div class="experience">
+<div class="inner">
+<h3>6</h3>
+<span>successful<br/>years</span>
+</div>
+</div>
+</div>
+</div>
+<div class="right">
+<h3>This My CV</h3>
+<div class="list">
+<ul>
+<li>
+<ul class="item">
+<li>
+<span>» Name :</span>
+<p>Ms. Fatma Mahmoud •</p>
+</li>
+<li>
+<span>» Phone :</span>
+<p>+20 102 023 4048 .</p>
+</li>
+</li>
+<li>
+<li>
+<span>» Address :</span>
+<p>Aga , Daqahlia , Egypt‎ .</p>
+</li>
+<li>
+<span>» Business :</span>
+<p>Teacher .</p>
+</li>
+<li>
+<span>» FreeLance :</span>
+<p>Available .</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<a href="#" class="btn"><span>home</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- بدايةالسيرة الشخصيه -->
+<section class="resumec" id="resumec">
+    <div class="main-title">
+        <h2>Personal <span>Biography</span></h2>
+        <p>some information about me ,<br> and how did i start .</p>
+    </div>
+    <div class="containerc">
+        <div class="resume-colc wow fadeInRight">
+            <div class="headingc">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Education : </h3>
+            </div>
+            <div class="boxc">
+                <span>2017</span>
+                <h3>Graduation :</h3>
+                <p>Graduation from Aga Secondary School for Girls , and Joining University .</p>
+            </div>
+            <div class="boxc">
+                <span>2018 - 2021</span>
+                <h3>Join University :</h3>
+                <p>I Joined Faculty of Science and Education , and studied for three years .</p>
+            </div>
+            <div class="boxc">
+                <span>2021</span>
+                <h3>Bachelor :</h3>
+                <p>I got a Bachelor from Faculty of Science and Education .</p>
+            </div>
+            <div class="boxc">
+                <span>2021 - 2022</span>
+                <h3>Started Teaching :</h3>
+                <p>I started to work as biology and science teacher .</p>
+            </div>
+            <div class="boxc">
+                <span>2022 - now</span>
+                <h3>Working :</h3>
+                <p>Now Iam working as Biology and science Teacher .</p>
+            </div>
+        </div>
+        <div class="resume-colc wow fadeInRight">
+            <div class="headingc">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>More Information :</h3>
+            </div>
+            <div class="boxc">
+                <span>am i love my work ?!</span>
+                <h3>Sure I love it :</h3>
+                <p>I love my work so much , and very happy for helping my students .</p>
+            </div>
+            <div class="boxc">
+                <span>about my work !</span>
+                <h3>Teacher :</h3>
+                <p>I teach all the students of the preparatory and secondary stage .</p>
+            </div>
+            <div class="boxc">
+                <span>about my life !</span>
+                <h3>simple person :</h3>
+                <p>I live a simple life like everyone else .</p>
+            </div>
+    </div>
+</section>
+
+<section id="services" class="services">
+<div class="container">
+<div class="main-title">
+<h2>Social <span>Media</span></h2>
+<p>You Can Get in Touch with me ,<br>This my social media accounts .</p>
+</div>
+<div class="services-container">
+<div class="serv wow bounceInUp" data-wow-delay="0.8s">
+<span class="icon" id="ic1"><i class="fab fa-facebook-f"></i></span>
+<a target="_blank" href="https://www.facebook.com/fatma.hmahmoud.77?mibextid=ZbWKwL"> <h3>Facebook</h3></a>
+</div>
+
+<div class="serv wow bounceInUp" data-wow-delay="1.2s">
+<span class="icon" id="ic3"><i class="fab fa-instagram"></i></span>
+<a target="_blank" href="https://instagram.com/fatma__mahmoud24?igshid=NTc4MTIwNjQ2YQ=="><h3>Instagram</h3></a>
+</div>
+<div class="serv wow bounceInUp" data-wow-delay="1.3s">
+<span class="icon" id="ic4"><i class="fab fa-whatsapp"></i></i></span>
+<a target="_blank" href="https://api.whatsapp.com/send?phone=201020234048"> <h3>Whatsapp</h3></a>
+</div>
+</section>
+
+<section id="contactme">
+<div class="main-title">
+    <h2>Contact <span>Me</span></h2>
+    <p>You can contact me from below !</p>
+</div>
+<div class="feature">
+    <div class="content">
+        <i class="fa-solid fa-earth-asia"></i>
+        <h2>Send Me <span>Message</span></h2>
+        <p>You can send me message by adding your phone number and message will come to me at whatsapp •♡</p>
+        <form method="POST" id="sendMessage">
+            <form class="w3-container">
+                <input class="w3-input w3-animate-input" type="text" style="width:250px" placeholder="Enter Your message here..." id="text"><br>
+            <button id="send" class="btn btn-primary btn-lg btn-block">Send message </button>
+        </form>
+      </form>
+    </div>
+</div>
+<footer>
+    <p>Powerd By <span>Boda</span> ©2023 </p>
+</footer>
+</section>
+
+<script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+        new WOW().init();
+    </script>
